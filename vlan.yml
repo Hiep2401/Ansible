@@ -1,5 +1,5 @@
 ---
-- name: tao vlan
+- name: Tao vlan
   hosts: all
   gather_facts: no
 
@@ -10,9 +10,11 @@
         name: "{{ item.name }}"
         state: present
       with_items:
-        - { number: 50, name: "phong 50" }
-        - { number: 51, name: "phong 51" }
-        - { number: 52, name: "phong 52" }
+        - { number: 10, name: "Phong NhanSu" }
+        - { number: 20, name: "Phong TaiChinh" }
+        - { number: 30, name: "Phong KeToan" }
+        - { number: 40, name: "Phong GiamDoc"}
+        - { number: 50, name: "Phong Hop"}
 
     - name: Show vlan
       ios_command:
