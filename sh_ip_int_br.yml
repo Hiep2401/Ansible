@@ -1,6 +1,6 @@
 ---
 - name: Cau hinh tren router
-  hosts: all
+  hosts: R1
   gather_facts: yes
 
   tasks:
@@ -8,7 +8,6 @@
       ios_command:
         commands:
           - show ip int brief
-          - show clock
       register: output
 
     - debug: var=output.stdout_lines
