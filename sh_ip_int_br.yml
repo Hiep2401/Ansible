@@ -1,6 +1,6 @@
 ---
 - name: Cau hinh tren router
-  groups: all
+  group: all
   gather_facts: no
 
   tasks:
