@@ -9,6 +9,7 @@
         commands:
           - show ip int brief
           - show clock
+          - show vlan
       register: output
 
     - debug: var=output.stdout_lines
