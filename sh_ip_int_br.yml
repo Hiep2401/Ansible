@@ -1,6 +1,6 @@
 ---
 - name: Cau hinh tren router
-  group: all
+  hosts: Switch
   gather_facts: no
 
   tasks:
