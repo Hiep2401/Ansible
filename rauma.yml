@@ -20,12 +20,11 @@
       with_items:
         - { name: "1"}
         - { name: "2"}
-    - name: static route R1
-      ios_config:
-        parents:
-          - int e0/1
-        lines:
-          - ip route 192.168.2.0 255.255.255.0 192.168.12.2
+    - name: configure static route
+      cisco.ios.ios_static_route:
+        prefix: 192.168.2.0
+        mask: 255.255.255.0
+        next_hop: 192.168.12.2
 - name: Cau hinh tren Router1
   hosts: R2
   gather_facts: no
@@ -47,9 +46,8 @@
       with_items:
         - { name: "1"}
         - { name: "2"}
-    - name: static route R1
-      ios_config:
-        parents:
-          - int e0/1
-        lines:
-          - ip route 192.168.1.0 255.255.255.0 192.168.12.1
+    - name: configure static route
+        cisco.ios.ios_static_route:
+          prefix: 192.168.1.0
+          mask: 255.255.255.0
+          next_hop: 192.168.12.1
