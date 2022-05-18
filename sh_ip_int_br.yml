@@ -1,6 +1,6 @@
 ---
 - name: Cau hinh tren router
-  hosts: R1
+  hosts: Router
   gather_facts: yes
 
   tasks:
