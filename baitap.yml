@@ -1,6 +1,6 @@
 ---
 - name: baitap
-  hosts: all
+  hosts: Router
   gather_facts: no
 
   tasks:
